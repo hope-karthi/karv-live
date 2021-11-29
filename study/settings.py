@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
 ]
 
 ROOT_URLCONF = 'study.urls'
@@ -127,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL ='/images/'
-
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIR=[
     os.path.join(BASE_DIR, 'static')
 ]
